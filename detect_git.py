@@ -7,7 +7,7 @@ import re
 
 # Configuration 
 
-LOG_FILE = "/home/pi/detection/ssh_logs.log" # can add multiple
+LOG_FILE = "/home/pi/<filename>.log" # can add multiple
 CHECK_INTERVAL = 60  # Check every 60 seconds
 suspicious_activity = []
 
@@ -22,7 +22,7 @@ def send_alert(message):
 	text_message = client.messages.create(
 		body=message,
 		from_=keys.twilio_number,
-		to=keys.my_phone_number
+		to=keys.your_phone_number
 		)
     
 # Function to check the log file for suspicious activities
@@ -46,7 +46,7 @@ def main():
     print("Starting intrusion detection script...")   
     
     while True:
-        os.system("journalctl -S '2 minute ago' -u ssh.service > /home/pi/detection/ssh_logs.log")
+        os.system("journalctl -S '2 minute ago' -u ssh.service > /home/pi/<filename>.log")
         check_logs()
         time.sleep(CHECK_INTERVAL)
 
