@@ -33,5 +33,5 @@ This project covers intrusion detection in Raspberry Pi using Python. I was alre
 ### Business Outcomes
 
 ### Architecture Diagram
-![Intrusion Detection on Raspberry Pi](https://github.com/user-attachments/assets/03e601fd-0208-4921-8454-f144b1fed88e)****
+![Intrusion Detection on Raspberry Pi](https://github.com/user-attachments/assets/03e601fd-0208-4921-8454-f144b1fed88e)
 
